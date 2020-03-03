@@ -1,0 +1,3 @@
+[submodule "Beispiele/FirstSteps"]
+	path = Beispiele/FirstSteps
+	url = https://github.com/pinselimo/FirstSteps.git
