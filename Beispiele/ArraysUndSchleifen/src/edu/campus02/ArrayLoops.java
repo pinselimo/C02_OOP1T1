@@ -24,6 +24,35 @@ public class ArrayLoops {
         int drittes = array[2]; // 3
         int viertes = array[3]; // 22
         // array.length == 4;
+        int erg = 0;
+        for (int index = 0; index <= array.length-1; index++) {
+            erg += array[ index ];
+        }
+
+        erg = 0;
+        for (int wert : array) {
+            erg += wert;
+        }
+
+        for (int index = 0; index <= array.length-1; index++) {
+            erg = array[index] * 3;
+            array[index] = erg;
+
+//            Das geht auch in einer Zeile:
+//            array[index] = array[index] * 3;
+//            oder ganz kurz:
+//            array[index] *= 3;
+//
+//            Ähnlich wie bei einer Variable:
+//            erg = erg * 3;
+//            erg *= 3;
+        }
+
+        int[] ergebnisse = new int[ array.length ];
+        for (int index = 0; index <= array.length-1; index++) {
+            ergebnisse[ index ] = array[ index ] * 3;
+        }
+        System.out.println(Arrays.toString(ergebnisse));
 
         /*
         Statt nun manuell auf jedes Element mit dem jeweiligen Index zuzugreifen,
@@ -221,6 +250,15 @@ public class ArrayLoops {
             summe += array[i];
         }
         return summe;
+    }
+
+    public static int fibonacci(int start, int start2, int ende) {
+        if (start >= ende) {
+            return ende;
+        }
+        int ergebnis = start + start2;
+        System.out.println(ergebnis);
+        return fibonacci(start2, ergebnis, ende);
     }
 
     // Beispiel 3 ("Ergebnis" interpretiert als das jeweils Dreifache)

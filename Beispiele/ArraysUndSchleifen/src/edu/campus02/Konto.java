@@ -24,6 +24,6 @@ public class Konto {
             kontostand += kontostand*zinssatz;
         }
         // Zuletzt geben wir den Kontostand noch einmal aus
-        System.out.println(kontostand);
+        System.out.println("Finaler Kontostand: " + kontostand);
     }
 }
