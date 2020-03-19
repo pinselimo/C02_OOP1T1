@@ -42,9 +42,18 @@ public class RechteckApp {
 
         boolean istGleichesObjekt = zweitesRechteck == drittesRechteck;
         boolean sindRechteckeGleich = zweitesRechteck.equals(drittesRechteck);
+        // äquivalent: drittesRechteck.equals(zweitesRechteck);
 
         System.out.println("Gleiches Objekt: " + istGleichesObjekt);
         System.out.println("Rechtecke gleich: " + sindRechteckeGleich);
+
+        // Beispiel Objekte
+        Rechteck rechteck = new Rechteck();
+        rechteck.laenge = 41;
+        rechteck.breite = 19;
+        int flaeche = rechteck.flaeche();
+        System.out.println("Fläche eines Rechtecks mit Länge 41 und Breite 19: " + flaeche);
+
 
         Auto auto = new Auto();
         String autoName = Auto.marke; // marke ist static und daher für alle Autos immer gleich
